@@ -3,10 +3,11 @@ package test;
 import java.util.*;
 
 public class SetTest {
-	@SuppressWarnings("rawtypes")
+
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public static void main(String []args) {
 		
-		Set<Comparable> sety = new TreeSet<Comparable>();
+		TreeSet sety = new TreeSet();
 		sety.add("2");
 		sety.add(1);
 		sety.add("3");

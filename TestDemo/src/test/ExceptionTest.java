@@ -2,6 +2,7 @@ package test;
 
 public class ExceptionTest {
 
+	@SuppressWarnings("finally")
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
 		int val=0;
