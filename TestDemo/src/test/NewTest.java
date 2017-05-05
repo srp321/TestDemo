@@ -27,6 +27,7 @@ class NewTest<T> {
     	numbers.remove(1); 
     	System.out.println("ArrayList contains : " + numbers); 
     	numbers.remove(1);
+    	//numbers.remove(new Integer(3));
     	System.out.println("ArrayList contains : " + numbers); 
     	
     	Set<ABC> st = new HashSet<>();
