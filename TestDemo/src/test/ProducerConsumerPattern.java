@@ -35,7 +35,8 @@ class Producer implements Runnable {
       this.sharedQueue = sharedQueue;
   }
 
-  @Override
+  @SuppressWarnings("unchecked")
+@Override
   public void run() {
       for(int i=0; i<10; i++){
           try {
@@ -64,6 +65,7 @@ class Consumer implements Runnable{
       while(true){
           try {
               System.out.println("Consumed: "+ sharedQueue.take());
+              throw new InterruptedException();
           } catch (InterruptedException ex) {
               Logger.getLogger(Consumer.class.getName()).log(Level.SEVERE, null, ex);
           }
