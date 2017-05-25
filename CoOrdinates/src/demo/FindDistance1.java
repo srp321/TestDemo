@@ -25,20 +25,22 @@ public class FindDistance1 {
 				double distance1 = Point2D.distance(x[i],y[i],x[j],y[j]);	
 				al.add(distance1);	
 			}
-			test.put((double) i, al);
+			test.put((double) i+1, al);
 		}
 		Iterator<Entry<Double, ArrayList<Double>>> itr = test.entrySet().iterator();
 		while (itr.hasNext()) {
 			Map.Entry<Double, ArrayList<Double>>  val =  itr.next();
-			//System.out.println(val.getKey()+" : "+val.getValue());
-			//System.out.println(val.getValue());
-			ArrayList<Double> nstore = new ArrayList<Double>(val.getValue()); 
+
+			ArrayList<Double> unSortedVal = new ArrayList<Double>(val.getValue()); 
 			Collections.sort(val.getValue());
+			//System.out.println(" sorted: "+val.getValue());
 			int[] indexes = new int[val.getValue().size()];
-			for (int n = 1; n < val.getValue().size(); n++){
-			    indexes[n] = nstore.indexOf(val.getValue().get(n)) + 1;
+			for (int k = 0; k < val.getValue().size(); k++){
+			    indexes[k] = unSortedVal.indexOf(val.getValue().get(k))+1;
 			}
-			System.out.println((val.getKey()+1) +" : "+ Arrays.toString(indexes));
+			System.out.println(indexes[0]+" : "+indexes[1]+", "+
+					indexes[2]+", "+indexes[3]+", "+indexes[4]);
+			System.out.println("\n");
 		}
 		
 	}
