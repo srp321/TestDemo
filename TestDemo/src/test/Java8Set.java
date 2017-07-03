@@ -2,7 +2,7 @@ package test;
 
 import java.util.*;
 
-public class SetTest {
+public class Java8Set {
 
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public static void main(String []args) {
